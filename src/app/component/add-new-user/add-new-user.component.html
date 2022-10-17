@@ -1,0 +1,32 @@
+<mat-dialog-content class="mat-typography mt-4">
+    <form [formGroup]="userForm">
+        <mat-form-field appearance="outline" class="w-100">
+            <mat-label>First name </mat-label>
+            <input matInput type="text" formControlName="firstName" placeholder="Please enter a first name">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="w-100">
+            <mat-label>Last name </mat-label>
+            <input matInput type="text" formControlName="lastName" placeholder="Please enter a last name">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="w-100">
+            <mat-label>Email </mat-label>
+            <input matInput type="email" formControlName="email" placeholder="Please enter email">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="w-100">
+            <mat-label>Gender </mat-label>
+            <input matInput type="text" formControlName="gender" placeholder="Please enter a gender">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="w-100">
+            <mat-label>Phone-Number </mat-label>
+            <input matInput type="number" formControlName="phoneNumber" placeholder="Please enter a phone number">
+        </mat-form-field>
+        <div class="col-md-12 d-inline-flex justify-content-end">
+            <button type="button" mat-raised-button class="ms-auto mb-3 pull-right btn btn-primary modal-button" (click)="createNewUser()"> Create
+            </button>
+        </div>
+    </form>
+</mat-dialog-content>

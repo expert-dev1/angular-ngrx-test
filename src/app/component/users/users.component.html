@@ -1,0 +1,72 @@
+<div class="container">
+    <div class="col-md-12 p-0 d-inline-flex">
+        <div [ngClass]="isTab == true ? 'col-md-8' : 'col-md-12'">
+            <div class="flex-wrapper col-md-12">
+                <h1 class="heading col-md-12 text-start">Users</h1>
+                <div class="col-md-12 d-inline-flex justify-content-between align-items-center">
+                    <mat-form-field class="searchInput-box position-relative">
+                        <svg class="search-icon position-absolute" viewBox="0 0 461.516 461.516"><path d="m185.746 371.332c41.251.001 81.322-13.762 113.866-39.11l122.778 122.778c9.172 8.858 23.787 8.604 32.645-.568 8.641-8.947 8.641-23.131 0-32.077l-122.778-122.778c62.899-80.968 48.252-197.595-32.716-260.494s-197.594-48.252-260.493 32.716-48.252 197.595 32.716 260.494c32.597 25.323 72.704 39.06 113.982 39.039zm-98.651-284.273c54.484-54.485 142.82-54.486 197.305-.002s54.486 142.82.002 197.305-142.82 54.486-197.305.002c-.001-.001-.001-.001-.002-.002-54.484-54.087-54.805-142.101-.718-196.585.239-.24.478-.479.718-.718z"/></svg>
+                        <input matInput appearance="standard" type="text" placeholder="Search" name="userSearchValue"
+                            [(ngModel)]="userSearchValue" (ngModelChange)="this.userSearch.next($event)">
+                    </mat-form-field>
+                    <button mat-raised-button class="add-btn btn btn-primary" type="button" (click)="openDialog()">Create New User</button>
+                </div>
+            </div>
+            <table class="my-table table table-responsive col-md-12" cellpadding="0" cellspacing="0">
+                <thead class="my-table headers">
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                        <th>Gender</th>
+                        <th>Phone-Number</th>
+                    </tr>
+                </thead>
+                <tbody class="my-table body">
+                    <tr my-active *ngFor="let item of searchUsers">
+                        <td><a class="NameDialoglink text-decoration" (click)="openFirstNameDialog(item)" href="javascript:void(0);">{{item.firstName}}</a></td>
+                        <td>{{item.lastName}}</td>
+                        <td>{{item.email}}</td>
+                        <td>{{item.gender}}</td>
+                        <td>{{item.phoneNumber}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <app-tab class="col-md-4 ps-4 position-relative" *ngIf="isTab">
+            <span class="close-aside-box position-absolute d-inline-flex align-items-center justify-content-center" (click)="closeFirstNameDialog();">
+                <svg viewBox="0 0 512 512"><path d="m25 512a25 25 0 0 1 -17.68-42.68l462-462a25 25 0 0 1 35.36 35.36l-462 462a24.93 24.93 0 0 1 -17.68 7.32z"/><path d="m487 512a24.93 24.93 0 0 1 -17.68-7.32l-462-462a25 25 0 0 1 35.36-35.36l462 462a25 25 0 0 1 -17.68 42.68z"/></svg>
+            </span>
+            <div class="mt-5" [ngClass]="isTab == true ? 'col-md-12' : 'col-md-0'">
+                <mat-tab-group>
+                    <mat-tab label="User-Info">
+                        <ul my-active class="User-Info-list mt-3">
+                            <li class="text-size mb-2"><b>First-Name</b>: {{item.firstName}}</li>
+                            <li class="text-size mb-2"><b>last-Name</b>: {{item.lastName}}</li>
+                            <li class="text-size mb-2"><b>Email</b>: {{item.email}}</li>
+                            <li class="text-size mb-2"><b>Gender</b>: {{item.gender}}</li>
+                            <li class="text-size"><b>Phone-Number</b>: {{item.phoneNumber}}</li>
+                        </ul>
+                    </mat-tab>
+
+                    <mat-tab label="History">
+                        <div class="newScrollBar mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
+                            nobis dolorem cupiditate, quasi placeat quaerat unde labore quibusdam fugiat suscipit aut!
+                            Vitae explicabo aperiam autem excepturi provident maxime ipsam vero. Facilis, quaerat harum
+                            nihil, fugiat, dolore quia dicta ratione repudiandae aspernatur quam tenetur porro pariatur
+                            officiis! Culpa quo fugit inventore recusandae eos sit veniam voluptate reiciendis numquam
+                            molestiae maiores, placeat voluptates non ex. Numquam, eveniet est a tempora minus delectus
+                            aspernatur ex labore accusamus soluta sint praesentium veniam eaque totam. Nobis, molestiae
+                            voluptatum iste unde commodi temporibus facere, possimus laboriosam voluptatem, porro
+                            accusantium exercitationem ut officiis minus obcaecati. Repudiandae tempore amet deleniti
+                            delectus autem sed accusamus et aspernatur nihil doloribus. Ipsum placeat dolores nesciunt.
+                            Accusantium delectus odit consequuntur facere quaerat fugiat iure doloribus ad eaque
+                            eligendi sunt dolores impedit a voluptas suscipit cum, alias sit saepe enim. Molestiae
+                            deleniti architecto impedit? Debitis ipsam fugit quos neque laborum aspernatur dolor magnam.
+                        </div>
+                    </mat-tab>
+                </mat-tab-group>
+            </div>
+        </app-tab>
+    </div>
+</div>

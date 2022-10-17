@@ -1,0 +1,143 @@
+table.my-table {
+    border: none;
+    border-collapse: collapse;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+}  
+thead.my-table.headers tr th {
+    background-color: #6c757d;
+    color: #ffffff;
+    height: 35px;
+    border-bottom: none;
+    font-weight: 500;
+}
+thead.my-table.headers tr th:last-child{
+    border-right: none;
+}  
+tbody.my-table.body tr td {
+    height: 35px;
+    border-bottom: 1px solid #fafafb;
+}  
+tbody.my-table.body tr td.last {
+    border-right: none;
+}
+tbody.my-table.body tr.active {
+    background-color: gainsboro;
+    cursor: pointer;
+}
+.NameDialoglink{
+    color: #009CDE;
+    text-decoration: none;
+}  
+div.pag-space {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+}  
+button.pag-button {
+    width: 50px;
+    height: 20px;
+    cursor: pointer;
+}  
+select.size-page {
+    width: 100px;
+    text-align-last: center;
+    cursor: pointer;
+}
+.add-btn {
+    float: right;
+    background: #003087;
+    color: #FFF;
+}
+.heading{
+    font-weight: 500;
+    color: #111;
+    margin-top: 20px;
+}
+.newScrollBar{
+    overflow-y: scroll;
+    height: calc(100vh - 110px);
+    height: 250px;
+}
+.newScrollBar::-webkit-scrollbar{
+    width: 5px;
+    border-radius: 10px;
+}
+.newScrollBar::-webkit-scrollbar-track{
+    background: #f2f2f2;
+    border-radius: 10px;
+}
+.newScrollBar::-webkit-scrollbar-thumb{
+    background: #DDD;
+    border-radius: 10px;
+}
+.text-size{
+    font-size: 16px;
+}
+.searchInput-box{
+    height: 40px;
+    border: 1px solid #EEE;
+    border-radius: 5px;
+    background: #FFF;
+    padding: 0px 10px 0px 30px;
+}
+.searchInput-box ::ng-deep .mat-form-field-infix{
+    padding: 0;
+    width: 100%;
+    border: none;
+}
+.searchInput-box ::ng-deep .mat-form-field-wrapper{
+    padding: 0;
+}
+.searchInput-box ::ng-deep input.mat-input-element{
+    height: 40px;
+    margin: 0px;
+    padding: 5px 0 0 0;
+}
+.searchInput-box svg{
+    height: 15px;
+    top: 11px;
+    left: -23px;
+}
+.searchInput-box ::ng-deep .mat-form-field-underline{
+    display: none;
+}
+.searchInput-box.mat-form-field-appearance-legacy ::ng-deep .mat-form-field-label{
+    top: 1.45rem
+}
+.searchInput-box.mat-form-field-appearance-legacy.mat-form-field-can-float.mat-form-field-should-float ::ng-deep .mat-form-field-label{
+    top: 2.05rem
+}
+
+.historyButton{
+    background-color: #00005e;
+    color: #fff;
+    margin-left: 20px;
+}
+::ng-deep .mat-tab-label-container .mat-tab-labels{
+    width: 100%;
+}
+::ng-deep .mat-tab-label-container .mat-tab-labels .mat-tab-label{
+    width: 50%;
+}
+::ng-deep .mat-tab-label-container .mat-tab-labels .mat-tab-label.mat-tab-label-active{
+    background: #003087;
+    color: #FFF;
+    opacity: 1;
+}
+.close-aside-box{
+    height: 40px;
+    width: 40px;
+    top: 5px;
+    right: -40px;
+    cursor: pointer;
+}
+.close-aside-box svg{
+    height: 15px;
+    width: 15px;
+}
+.User-Info-list li b{
+    font-weight: 500;
+}
